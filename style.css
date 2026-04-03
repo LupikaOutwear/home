@@ -278,17 +278,21 @@ section#\Nos\ tuques img {
 
 /* Style Vidéo Projets */
 .project-video {
-    margin-top: 40px;
+    margin: 40px auto 0;
     width: 100%;
+    max-width: 940px; /* On limite la largeur ici */
     display: flex;
     justify-content: center;
 }
 
 .project-video video {
     width: 100%;
-    max-width: 940px;
+    height: 500px;
+    object-fit: cover; /* Remplit tout l'espace et crop */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: block;
+    background-color: #000;
 }
 
 /* Grille Aventure */
