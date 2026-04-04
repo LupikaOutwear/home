@@ -338,45 +338,46 @@ h1:hover {
 
 @media (max-width: 600px) {
     header {
-        padding: 0 15px;
-        height: 70px;
-    }
-
-    .header-logo-left {
-        height: 50px;
-    }
-
-    .header-logo-center {
+        padding: 0 20px;
         height: 80px;
     }
 
+    .header-logo-left {
+        height: 65px;
+    }
+
+    .header-logo-center {
+        height: 110px;
+    }
+
     header h1 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     h1 {
-        font-size: 2rem;
-        margin-top: 30px;
+        font-size: 2.5rem;
+        margin-top: 40px;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0 10px;
+        max-width: 90%;
     }
 
     section {
-        padding: 40px 15px;
+        padding: 50px 20px;
     }
 
     section#brand-presentation {
-        min-height: 50vh;
+        min-height: 60vh;
         background-attachment: scroll;
     }
 
-    /* Grilles plus lisibles sur mobile */
+    /* Images et Vidéo plein écran sur mobile */
     .projects-grid img, .adventure-grid img {
         width: 100%;
-        max-width: 350px;
+        max-width: none;
         height: auto;
         aspect-ratio: 1/1;
     }
@@ -387,6 +388,12 @@ h1:hover {
     }
 
     .adventure-landscape img {
-        height: 250px;
+        height: 300px;
+    }
+
+    /* Menu hamburger plus gros */
+    .hamburger span {
+        width: 35px;
+        height: 4px;
     }
 }
