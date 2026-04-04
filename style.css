@@ -8,7 +8,23 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Corps du site */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: #141B23;
     color: #fff;
@@ -88,6 +104,11 @@ header h1 {
     opacity: 1;
     font-weight: bold;
     text-decoration: underline;
+}
+
+/* Cache la version menu par défaut (desktop) */
+.menu-lang {
+    display: none;
 }
 
 /* ================= MENU ================= */
@@ -373,6 +394,19 @@ h1:hover {
 
     .lang-switch {
         font-size: 0.8rem;
+    }
+
+    /* Bascule des sélecteurs de langue */
+    .header-lang {
+        display: none;
+    }
+
+    .menu-lang {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 1.1rem;
+        background-color: rgba(255, 255, 255, 0.05);
     }
 
     h1 {

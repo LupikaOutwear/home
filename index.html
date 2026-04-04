@@ -29,8 +29,8 @@
         });
 
         // --- GESTION DES LANGUES ---
-        const btnFr = document.getElementById("btn-fr");
-        const btnEn = document.getElementById("btn-en");
+        const btnsFr = document.querySelectorAll(".btn-fr");
+        const btnsEn = document.querySelectorAll(".btn-en");
         const translatableElements = document.querySelectorAll("[data-fr]");
 
         function setLanguage(lang) {
@@ -39,16 +39,16 @@
             });
 
             if (lang === "fr") {
-                btnFr.classList.add("active");
-                btnEn.classList.remove("active");
+                btnsFr.forEach(btn => btn.classList.add("active"));
+                btnsEn.forEach(btn => btn.classList.remove("active"));
             } else {
-                btnEn.classList.add("active");
-                btnFr.classList.remove("active");
+                btnsEn.forEach(btn => btn.classList.add("active"));
+                btnsFr.forEach(btn => btn.classList.remove("active"));
             }
         }
 
-        btnFr.addEventListener("click", () => setLanguage("fr"));
-        btnEn.addEventListener("click", () => setLanguage("en"));
+        btnsFr.forEach(btn => btn.addEventListener("click", () => setLanguage("fr")));
+        btnsEn.forEach(btn => btn.addEventListener("click", () => setLanguage("en")));
     });
 </script>
 
@@ -59,8 +59,8 @@
     <img src="logo2.PNG" alt="Lupika Outwear" class="header-logo-center">
 
     <div class="header-right">
-        <div class="lang-switch">
-            <span id="btn-fr" class="active">FR</span> | <span id="btn-en">EN</span>
+        <div class="lang-switch header-lang">
+            <span class="btn-fr active">FR</span> | <span class="btn-en">EN</span>
         </div>
 
         <div class="menu">
@@ -71,6 +71,9 @@
             </div>
 
             <div class="menu-content">
+                <div class="lang-switch menu-lang">
+                    <span class="btn-fr active">FR</span> | <span class="btn-en">EN</span>
+                </div>
                 <a href="#brand-presentation" data-fr="Présentation de la marque" data-en="Brand Presentation">Présentation de la marque</a>
                 <a href="#Nos produits" data-fr="Nos produits" data-en="Our Products">Nos produits</a>
                 <a href="#Nos tuques" data-fr="Nos tuques" data-en="Our Beanies">Nos tuques</a>
