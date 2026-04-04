@@ -338,23 +338,55 @@ h1:hover {
 
 @media (max-width: 600px) {
     header {
-        padding: 15px;
+        padding: 0 15px;
+        height: 70px;
+    }
+
+    .header-logo-left {
+        height: 50px;
+    }
+
+    .header-logo-center {
+        height: 80px;
     }
 
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     h1 {
         font-size: 2rem;
+        margin-top: 30px;
     }
 
     h3 {
         font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 40px 15px;
     }
 
     section#brand-presentation {
-        min-height: 60vh;
+        min-height: 50vh;
         background-attachment: scroll;
+    }
+
+    /* Grilles plus lisibles sur mobile */
+    .projects-grid img, .adventure-grid img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+    .project-video video {
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .adventure-landscape img {
+        height: 250px;
     }
 }
