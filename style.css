@@ -483,7 +483,8 @@ h1:hover {
 
 @media (max-width: 400px) {
     .header-logo-center {
-        display: none; /* Cacher le logo central sur les très petits écrans pour éviter la surcharge */
+        height: 60px; /* Taille réduite pour tenir sur très petit écran sans cacher */
+        display: block; 
     }
     
     h1 {
