@@ -377,6 +377,7 @@ h1:hover {
     header {
         padding: 0 15px;
         height: 70px;
+        position: relative; /* Assure que le logo absolu se place par rapport au header */
     }
 
     .header-logo-left {
@@ -384,8 +385,14 @@ h1:hover {
     }
 
     .header-logo-center {
-        height: 80px;
+        display: block !important; /* Force l'affichage */
+        height: 90px; /* Légèrement plus grand que le header pour l'effet de débordement */
+        position: absolute;
+        left: 50%;
         top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1001; /* Doit être au-dessus du fond du header */
+        pointer-events: none;
     }
 
     .header-right {
